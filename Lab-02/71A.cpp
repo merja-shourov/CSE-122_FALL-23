@@ -1,19 +1,20 @@
-#include<stdio.h>
-#include<string.h>
- 
+#include<bits/stdc++.h>
+using namespace std;
+
 int main(){
-     int t; scanf("%d", &t);
- 
-     while (t--)
-     {
-          char str[101];
-          scanf("%s", str);
-          int len= strlen(str);
-          if( strlen(str) <= 10 ){
-               printf("%s\n", str);
-          }else{
-               printf("%c%d%c\n", str[0], len-2, str[len-1] );
-          }
-     }
-     return 0;
+    int x;
+    cin >> x;
+    cin.ignore();
+    while( x-- ){
+        string sen;
+        getline(cin, sen);
+        
+        if( sen.length() <= 10 ){
+            cout << sen << endl;
+        }else{
+            cout << sen[0] << sen.size()-2 << sen[sen.size()-1] << endl;
+        }
+        
+    }
+    return 0;
 }
